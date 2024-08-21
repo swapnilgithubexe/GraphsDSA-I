@@ -14,3 +14,8 @@ This repository contains a Python implementation of graphs for Data Structures a
   - Display the adjacency matrix
   - Display the adjacency List
   - Check connectivity
+ 
+## License
+
+This README provides a basic overview of my repository, including how to represent graphs, usage examples, and other relevant information. Adjust any specific details to better match your implementation and requirements.
+
