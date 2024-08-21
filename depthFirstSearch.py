@@ -1,0 +1,28 @@
+class Graph:
+    def __init__(self, n: int):
+        self.graph = []
+        self.vis = []
+        for _ in range(n+1):
+            self.graph.append([])
+            self.vis.append(False)
+
+    def edges(self, u, v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+
+    ##startingPoint
+    def dfs(self, s):
+        self.vis[s] = True
+        print(f"Visited: {s}")
+        for v in self.graph[s]:
+            if not self.vis[v]:
+                self.dfs(v)
+
+if __name__ == "__main__":
+    graph = Graph(5)
+    graph.edges(1, 2)
+    graph.edges(1, 3)
+    graph.edges(2, 4)
+    graph.edges(3, 4)
+    graph.edges(3, 5)
+    graph.dfs(1)
