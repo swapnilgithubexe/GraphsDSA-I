@@ -15,7 +15,7 @@ class Graph:
     ##startingPoint
     def dfs(self, s):
         self.vis[s] = True
-        print(f"Visited: {s}")
+        # print(f"Visited: {s}")
         for v in self.graph[s]:
             if not self.vis[v]:
                 self.dfs(v)
@@ -23,7 +23,6 @@ class Graph:
                 self.parent[v] = s
 
     def _dfs(self, s):
-        self.vis[s] = True
         self.parent[s] = 0
         self.dfs(s)
 
